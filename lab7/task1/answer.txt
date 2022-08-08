@@ -1,0 +1,7 @@
+awk -F, 'BEGIN { for(i=0 ; i <ARGC; i++) print "ARGV[" i "] = " ARGV[i]}' oscar_age_male.csv
+
+awk -F, '{printf "%-25s %-5s %-5s\n", $4, $3, $2}' oscar_age_male.csv
+
+awk -F, 'BEGIN{getline} $2>=1970 {print "-------------------------" "\n" "Actor Name: " $4 "\n" "Movie Name: " $5}' oscar_age_male.csv
+
+awk -F, 'BEGIN{getline} $1>=50 && $1<=70 {print "-------------------------" "\n" "Movie Name: " $5}' oscar_age_male.csv

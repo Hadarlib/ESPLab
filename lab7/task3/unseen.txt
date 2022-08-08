@@ -1,0 +1,13 @@
+#! /usr/bin/awk -f
+
+BEGIN { FS = ","}
+
+{
+if ($2 NF<=3)
+{
+count = count +1
+{print $2}
+}
+}
+
+END {print count}
